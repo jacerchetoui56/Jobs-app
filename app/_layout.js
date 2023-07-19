@@ -16,7 +16,7 @@ export default function Layout() {
     if (fontsLoaded) {
       await SplashScreen.hideAsync();
     }
-  });
+  }, [fontsLoaded]);
 
   if (!fontsLoaded) return null;
 
