@@ -14,7 +14,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     flexDirection: "row",
   },
-  likeBtn: {
+  likeBtn: (isLiked) => ({
     width: 55,
     height: 55,
     borderWidth: 1,
@@ -22,12 +22,13 @@ const styles = StyleSheet.create({
     borderRadius: SIZES.medium,
     justifyContent: "center",
     alignItems: "center",
-  },
-  likeBtnImage: {
+    backgroundColor: isLiked ? COLORS.tertiary : null,
+  }),
+  likeBtnImage: (isLiked) => ({
     width: "40%",
     height: "40%",
-    tintColor: "#F37453",
-  },
+    tintColor: isLiked ? COLORS.lightWhite : "#F37453",
+  }),
   applyBtn: {
     flex: 1,
     backgroundColor: "#FE7654",
